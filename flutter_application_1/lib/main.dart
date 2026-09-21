@@ -14,7 +14,13 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(title: const Text(appTitle)),
         body: const SingleChildScrollView(
           child: Column(
-            children:[]
+            children:[
+              TitleSection(
+                name: 'Oeschinen Lake Campground',
+                location: 'Kandersteg, Switzerland'
+              ),
+
+            ]
           ),
         ),
       ),
@@ -52,6 +58,9 @@ class TitleSection extends StatelessWidget{
             ),
           ),
 
+
+
+
           Icon(Icons.star, color: Colors.red[500]),
           const Text('41'),
 
@@ -61,4 +70,13 @@ class TitleSection extends StatelessWidget{
   }
 }
 
+class ButtonSection extends StatelessWidget{
+  const ButtonSection({super.key});
 
+  @override
+  Widget build(BuildContext context){
+    final Color color = Theme.of(context).primaryColor;
+  }
+}
+
+//
