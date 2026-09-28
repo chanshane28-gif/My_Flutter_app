@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 void main()=> runApp(const MyApp());
 
+/*
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -78,5 +79,35 @@ class ButtonSection extends StatelessWidget{
     final Color color = Theme.of(context).primaryColor;
   }
 }
-
+*/
 //
+
+
+class MyApp extends StatelessWidget{
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context){
+    return MaterialApp(
+      debugShowCheckedModeBanner:false,
+      theme:ThemeData(
+        brightness:Brightness.dark,
+        primaryColor:Colors.blueGrey,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.blueGrey,
+        ),
+      ),
+        home:Scaffold(
+          appBar:AppBar(
+            title:const Text('MaterialApp Theme'),
+          ),
+          body:const Center(
+            child: Text(
+              'Hello, Dark Theme!',
+              style: TextStyle(fontSize:18),
+            ),
+          ),
+        ),
+    );
+  }
+}
